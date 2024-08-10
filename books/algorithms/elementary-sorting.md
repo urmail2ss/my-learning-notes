@@ -53,31 +53,31 @@
   - Average and Worst case: \(O(n^2)\).
 - **Space Complexity**: \(O(1)\) (in-place).
 
-    import java.util.Arrays;
-
-    public class InsertionSort {
-        public static void insertionSort(int[] array) {
-            int n = array.length;
-            for (int i = 1; i < n; i++) {
-                int key = array[i];
-                int j = i - 1;
+        import java.util.Arrays;
     
-                // Move elements of array[0..i-1], that are greater than key, to one position ahead
-                // of their current position
-                while (j >= 0 && array[j] > key) {
-                    array[j + 1] = array[j];
-                    j = j - 1;
+        public class InsertionSort {
+            public static void insertionSort(int[] array) {
+                int n = array.length;
+                for (int i = 1; i < n; i++) {
+                    int key = array[i];
+                    int j = i - 1;
+        
+                    // Move elements of array[0..i-1], that are greater than key, to one position ahead
+                    // of their current position
+                    while (j >= 0 && array[j] > key) {
+                        array[j + 1] = array[j];
+                        j = j - 1;
+                    }
+                    array[j + 1] = key;
                 }
-                array[j + 1] = key;
+            }
+        
+            public static void main(String[] args) {
+                int[] array = {12, 11, 13, 5, 6};
+                insertionSort(array);
+                System.out.println("Sorted array: " + Arrays.toString(array));
             }
         }
-    
-        public static void main(String[] args) {
-            int[] array = {12, 11, 13, 5, 6};
-            insertionSort(array);
-            System.out.println("Sorted array: " + Arrays.toString(array));
-        }
-    }
 
 
 ### 3. **Bubble Sort**
