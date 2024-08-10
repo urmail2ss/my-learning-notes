@@ -1,9 +1,5 @@
 # Designing Data-Intensive Applications
 
-Here’s a refined version of your notes:
-
----
-
 **Building Blocks of Data-Intensive Applications**
 
 Data-intensive applications are typically constructed using a set of standard building blocks, which often include:
