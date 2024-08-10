@@ -9,6 +9,38 @@
 - **Time Complexity**: \(O(n^2)\) for all cases.
 - **Space Complexity**: \(O(1)\) (in-place).
 
+  import java.util.Arrays;
+
+public class SelectionSort {
+    public static void selectionSort(int[] array) {
+        int n = array.length;
+        for (int i = 0; i < n - 1; i++) {
+            int minIndex = i;
+            for (int j = i + 1; j < n; j++) {
+                if (array[j] < array[minIndex]) {
+                    minIndex = j;
+                }
+            }
+            if (minIndex != i) {
+                swap(array, i, minIndex);
+            }
+        }
+    }
+
+    private static void swap(int[] array, int i, int j) {
+        int temp = array[i];
+        array[i] = array[j];
+        array[j] = temp;
+    }
+
+    public static void main(String[] args) {
+        int[] array = {64, 25, 12, 22, 11};
+        selectionSort(array);
+        System.out.println("Sorted array: " + Arrays.toString(array));
+    }
+}
+
+
 ### 2. **Insertion Sort**
 - **Concept**: Builds the final sorted array one item at a time by repeatedly picking the next item and inserting it into the correct position.
 - **Steps**:
