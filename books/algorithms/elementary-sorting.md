@@ -92,36 +92,36 @@
   - Average and Worst case: \(O(n^2)\).
 - **Space Complexity**: \(O(1)\) (in-place).
 
-    import java.util.Arrays;
-
-    public class BubbleSort {
-        public static void bubbleSort(int[] array) {
-            int n = array.length;
-            for (int i = 0; i < n - 1; i++) {
-                boolean swapped = false;
-                for (int j = 0; j < n - i - 1; j++) {
-                    if (array[j] > array[j + 1]) {
-                        swap(array, j, j + 1);
-                        swapped = true;
+        import java.util.Arrays;
+    
+        public class BubbleSort {
+            public static void bubbleSort(int[] array) {
+                int n = array.length;
+                for (int i = 0; i < n - 1; i++) {
+                    boolean swapped = false;
+                    for (int j = 0; j < n - i - 1; j++) {
+                        if (array[j] > array[j + 1]) {
+                            swap(array, j, j + 1);
+                            swapped = true;
+                        }
                     }
+                    // If no elements were swapped in the inner loop, the array is already sorted
+                    if (!swapped) break;
                 }
-                // If no elements were swapped in the inner loop, the array is already sorted
-                if (!swapped) break;
+            }
+        
+            private static void swap(int[] array, int i, int j) {
+                int temp = array[i];
+                array[i] = array[j];
+                array[j] = temp;
+            }
+        
+            public static void main(String[] args) {
+                int[] array = {5, 1, 4, 2, 8};
+                bubbleSort(array);
+                System.out.println("Sorted array: " + Arrays.toString(array));
             }
         }
-    
-        private static void swap(int[] array, int i, int j) {
-            int temp = array[i];
-            array[i] = array[j];
-            array[j] = temp;
-        }
-    
-        public static void main(String[] args) {
-            int[] array = {5, 1, 4, 2, 8};
-            bubbleSort(array);
-            System.out.println("Sorted array: " + Arrays.toString(array));
-        }
-    }
 
 
 ### 4. **Shell Sort**
@@ -134,31 +134,31 @@
 - **Time Complexity**: Depends on the gap sequence, generally better than \(O(n^2)\).
 - **Space Complexity**: \(O(1)\) (in-place).
 
-    import java.util.Arrays;
-    
-    public class ShellSort {
-        public static void shellSort(int[] array) {
-            int n = array.length;
-    
-            // Start with a large gap, then reduce the gap
-            for (int gap = n / 2; gap > 0; gap /= 2) {
-                for (int i = gap; i < n; i++) {
-                    int temp = array[i];
-                    int j;
-                    for (j = i; j >= gap && array[j - gap] > temp; j -= gap) {
-                        array[j] = array[j - gap];
+        import java.util.Arrays;
+        
+        public class ShellSort {
+            public static void shellSort(int[] array) {
+                int n = array.length;
+        
+                // Start with a large gap, then reduce the gap
+                for (int gap = n / 2; gap > 0; gap /= 2) {
+                    for (int i = gap; i < n; i++) {
+                        int temp = array[i];
+                        int j;
+                        for (j = i; j >= gap && array[j - gap] > temp; j -= gap) {
+                            array[j] = array[j - gap];
+                        }
+                        array[j] = temp;
                     }
-                    array[j] = temp;
                 }
             }
+        
+            public static void main(String[] args) {
+                int[] array = {12, 34, 54, 2, 3};
+                shellSort(array);
+                System.out.println("Sorted array: " + Arrays.toString(array));
+            }
         }
-    
-        public static void main(String[] args) {
-            int[] array = {12, 34, 54, 2, 3};
-            shellSort(array);
-            System.out.println("Sorted array: " + Arrays.toString(array));
-        }
-    }
     
 
 ### Summary
