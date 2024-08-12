@@ -1,5 +1,6 @@
 When you hit a URL in a browser, a series of interactions between your device and the server hosting the website take place. These interactions can be understood through the **OSI (Open Systems Interconnection) model**, which consists of seven layers. 
-<img width="731" alt="image" src="https://github.com/user-attachments/assets/354540c7-b5fb-4489-be3a-b164b7560270
+
+<img width="730" alt="image" src="https://github.com/user-attachments/assets/22b24df9-56d4-4823-854c-eeaeb9878f59">
 
 Here’s a detailed breakdown:
 
