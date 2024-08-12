@@ -1,7 +1,7 @@
-When you hit a URL in a browser, a series of interactions between your device and the server hosting the website take place. These interactions can be understood through the **OSI (Open Systems Interconnection) model**, which consists of seven layers. Here’s a detailed breakdown:
+When you hit a URL in a browser, a series of interactions between your device and the server hosting the website take place. These interactions can be understood through the **OSI (Open Systems Interconnection) model**, which consists of seven layers. 
+<img width="731" alt="image" src="https://github.com/user-attachments/assets/354540c7-b5fb-4489-be3a-b164b7560270
 
-![image](https://github.com/user-attachments/assets/9c1293b8-c485-4c8a-975c-5acbdaf90bed)
-
+Here’s a detailed breakdown:
 
 ### 1. **Physical Layer (Layer 1)**
    - **Role**: This layer is responsible for the physical connection between devices. It deals with the transmission of raw bits (0s and 1s) over a physical medium, such as cables, radio waves, or fiber optics.
