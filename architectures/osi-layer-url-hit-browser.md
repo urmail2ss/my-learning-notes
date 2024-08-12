@@ -2,9 +2,19 @@
 
 When you hit a URL in a browser, a series of interactions between your device and the server hosting the website take place. These interactions can be understood through the **OSI (Open Systems Interconnection) model**, which consists of seven layers. 
 
+### End-to-End Process:
+**User Action: ** You enter a URL in the browser and hit enter.
+**DNS Lookup:** The browser sends a request to a DNS server to resolve the domain name (e.g., www.example.com) into an IP address.
+**Connection Establishment:** A TCP connection is established with the server using the resolved IP address.
+**Request Transmission:** The browser sends an HTTP/HTTPS request to the server.
+**Server Processing:** The server processes the request, retrieves the required resources (like HTML, CSS, JS files), and sends them back.
+**Data Rendering:** The browser receives the response, the Presentation layer decrypts (if HTTPS), and then it renders the web page, displaying it to you.
+
+This entire process, from entering a URL to the webpage being displayed, involves all seven layers of the OSI model, working together to ensure data is transmitted, received, and presented correctly.
+
 <img width="730" alt="image" src="https://github.com/user-attachments/assets/22b24df9-56d4-4823-854c-eeaeb9878f59">
 
-Here’s a detailed breakdown:
+## Here’s a detailed breakdown:
 
 ### 1. **Physical Layer (Layer 1)**
    - **Role**: This layer is responsible for the physical connection between devices. It deals with the transmission of raw bits (0s and 1s) over a physical medium, such as cables, radio waves, or fiber optics.
